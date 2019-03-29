@@ -77,6 +77,7 @@
 		448838BB224E6B220033C83E /* IdDog */ = {
 			isa = PBXGroup;
 			children = (
+				448838DC224E6B800033C83E /* Commons */,
 				448838BC224E6B220033C83E /* AppDelegate.swift */,
 				448838BE224E6B220033C83E /* ViewController.swift */,
 				448838C0224E6B220033C83E /* Main.storyboard */,
@@ -94,6 +95,13 @@
 				448838D3224E6B230033C83E /* Info.plist */,
 			);
 			path = IdDogTests;
+			sourceTree = "<group>";
+		};
+		448838DC224E6B800033C83E /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Commons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
