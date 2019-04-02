@@ -13,6 +13,29 @@
 		448838C4224E6B230033C83E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 448838C3224E6B230033C83E /* Assets.xcassets */; };
 		448838C7224E6B230033C83E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 448838C5224E6B230033C83E /* LaunchScreen.storyboard */; };
 		448838D2224E6B230033C83E /* IdDogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448838D1224E6B230033C83E /* IdDogTests.swift */; };
+		448838DE224E90580033C83E /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448838DD224E90580033C83E /* Session.swift */; };
+		448838E0224E919B0033C83E /* ImageUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448838DF224E919B0033C83E /* ImageUtils.swift */; };
+		448838E7224E931C0033C83E /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448838E6224E931C0033C83E /* HomeInteractor.swift */; };
+		448838E9224E93380033C83E /* HomeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448838E8224E93380033C83E /* HomeWorker.swift */; };
+		448838EB224E93490033C83E /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448838EA224E93490033C83E /* HomePresenter.swift */; };
+		448838ED224E93650033C83E /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448838EC224E93650033C83E /* HomeRouter.swift */; };
+		448838EF224E93CD0033C83E /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448838EE224E93CD0033C83E /* HomeViewController.swift */; };
+		448838F7224EA8960033C83E /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448838F6224EA8960033C83E /* BaseViewController.swift */; };
+		448838F9224EA9D50033C83E /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448838F8224EA9D50033C83E /* BaseRequest.swift */; };
+		448838FD224EAB8E0033C83E /* HomeModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448838FC224EAB8E0033C83E /* HomeModels.swift */; };
+		44883901224EACDD0033C83E /* SignupRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44883900224EACDD0033C83E /* SignupRequest.swift */; };
+		44883903224EB6980033C83E /* MapperSignup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44883902224EB6980033C83E /* MapperSignup.swift */; };
+		448839072250580D0033C83E /* DogList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 448839062250580D0033C83E /* DogList.storyboard */; };
+		4488390B225058A70033C83E /* DogListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4488390A225058A70033C83E /* DogListViewController.swift */; };
+		4488390E22517FBD0033C83E /* DogListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4488390D22517FBD0033C83E /* DogListInteractor.swift */; };
+		4488391022517FD00033C83E /* DogListModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4488390F22517FD00033C83E /* DogListModels.swift */; };
+		4488391222517FE60033C83E /* DogListWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4488391122517FE60033C83E /* DogListWorker.swift */; };
+		4488391422517FF10033C83E /* DogListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4488391322517FF10033C83E /* DogListPresenter.swift */; };
+		4488391622517FFB0033C83E /* DogListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4488391522517FFB0033C83E /* DogListRouter.swift */; };
+		4488391A2251810D0033C83E /* MapperDog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448839192251810D0033C83E /* MapperDog.swift */; };
+		4488391C225183590033C83E /* DogRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4488391B225183590033C83E /* DogRequest.swift */; };
+		448839202252F62A0033C83E /* DogDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4488391F2252F62A0033C83E /* DogDetail.swift */; };
+		D0DA455685D07A1BC81CA5A3 /* Pods_IdDog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C296731CDA74DF76ABA8DBCA /* Pods_IdDog.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +59,31 @@
 		448838CD224E6B230033C83E /* IdDogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IdDogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		448838D1224E6B230033C83E /* IdDogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IdDogTests.swift; sourceTree = "<group>"; };
 		448838D3224E6B230033C83E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		448838DD224E90580033C83E /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		448838DF224E919B0033C83E /* ImageUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUtils.swift; sourceTree = "<group>"; };
+		448838E6224E931C0033C83E /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		448838E8224E93380033C83E /* HomeWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWorker.swift; sourceTree = "<group>"; };
+		448838EA224E93490033C83E /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		448838EC224E93650033C83E /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		448838EE224E93CD0033C83E /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		448838F6224EA8960033C83E /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		448838F8224EA9D50033C83E /* BaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
+		448838FC224EAB8E0033C83E /* HomeModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModels.swift; sourceTree = "<group>"; };
+		44883900224EACDD0033C83E /* SignupRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupRequest.swift; sourceTree = "<group>"; };
+		44883902224EB6980033C83E /* MapperSignup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapperSignup.swift; sourceTree = "<group>"; };
+		448839062250580D0033C83E /* DogList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DogList.storyboard; sourceTree = "<group>"; };
+		4488390A225058A70033C83E /* DogListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogListViewController.swift; sourceTree = "<group>"; };
+		4488390D22517FBD0033C83E /* DogListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogListInteractor.swift; sourceTree = "<group>"; };
+		4488390F22517FD00033C83E /* DogListModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogListModels.swift; sourceTree = "<group>"; };
+		4488391122517FE60033C83E /* DogListWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogListWorker.swift; sourceTree = "<group>"; };
+		4488391322517FF10033C83E /* DogListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogListPresenter.swift; sourceTree = "<group>"; };
+		4488391522517FFB0033C83E /* DogListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogListRouter.swift; sourceTree = "<group>"; };
+		448839192251810D0033C83E /* MapperDog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapperDog.swift; sourceTree = "<group>"; };
+		4488391B225183590033C83E /* DogRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogRequest.swift; sourceTree = "<group>"; };
+		4488391F2252F62A0033C83E /* DogDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogDetail.swift; sourceTree = "<group>"; };
+		5E37708AD6D305C921CD6B62 /* Pods-IdDog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IdDog.debug.xcconfig"; path = "Target Support Files/Pods-IdDog/Pods-IdDog.debug.xcconfig"; sourceTree = "<group>"; };
+		C296731CDA74DF76ABA8DBCA /* Pods_IdDog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IdDog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F91185E68B3EF9D412BE03EA /* Pods-IdDog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IdDog.release.xcconfig"; path = "Target Support Files/Pods-IdDog/Pods-IdDog.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0DA455685D07A1BC81CA5A3 /* Pods_IdDog.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +105,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A0D3F5DDFAB1DE54400F7E4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5E37708AD6D305C921CD6B62 /* Pods-IdDog.debug.xcconfig */,
+				F91185E68B3EF9D412BE03EA /* Pods-IdDog.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		448838B0224E6B220033C83E = {
 			isa = PBXGroup;
 			children = (
 				448838BB224E6B220033C83E /* IdDog */,
 				448838D0224E6B230033C83E /* IdDogTests */,
 				448838BA224E6B220033C83E /* Products */,
+				1A0D3F5DDFAB1DE54400F7E4 /* Pods */,
+				A0C43306983D227088328DB1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,10 +137,10 @@
 		448838BB224E6B220033C83E /* IdDog */ = {
 			isa = PBXGroup;
 			children = (
+				448838E1224E91D50033C83E /* Features */,
 				448838DC224E6B800033C83E /* Commons */,
 				448838BC224E6B220033C83E /* AppDelegate.swift */,
 				448838BE224E6B220033C83E /* ViewController.swift */,
-				448838C0224E6B220033C83E /* Main.storyboard */,
 				448838C3224E6B230033C83E /* Assets.xcassets */,
 				448838C5224E6B230033C83E /* LaunchScreen.storyboard */,
 				448838C8224E6B230033C83E /* Info.plist */,
@@ -100,8 +160,150 @@
 		448838DC224E6B800033C83E /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				448838F5224EA8800033C83E /* base */,
+				448838DD224E90580033C83E /* Session.swift */,
+				448838DF224E919B0033C83E /* ImageUtils.swift */,
 			);
 			path = Commons;
+			sourceTree = "<group>";
+		};
+		448838E1224E91D50033C83E /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				448838E2224E91F20033C83E /* home */,
+				44883904225057840033C83E /* dog list */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		448838E2224E91F20033C83E /* home */ = {
+			isa = PBXGroup;
+			children = (
+				4488390C22505B040033C83E /* Storyboards */,
+				448838E5224E927C0033C83E /* scenes */,
+				448838E3224E921A0033C83E /* request */,
+			);
+			path = home;
+			sourceTree = "<group>";
+		};
+		448838E3224E921A0033C83E /* request */ = {
+			isa = PBXGroup;
+			children = (
+				448838E4224E922F0033C83E /* mappers */,
+				44883900224EACDD0033C83E /* SignupRequest.swift */,
+			);
+			path = request;
+			sourceTree = "<group>";
+		};
+		448838E4224E922F0033C83E /* mappers */ = {
+			isa = PBXGroup;
+			children = (
+				44883902224EB6980033C83E /* MapperSignup.swift */,
+			);
+			path = mappers;
+			sourceTree = "<group>";
+		};
+		448838E5224E927C0033C83E /* scenes */ = {
+			isa = PBXGroup;
+			children = (
+				448838E6224E931C0033C83E /* HomeInteractor.swift */,
+				448838FC224EAB8E0033C83E /* HomeModels.swift */,
+				448838E8224E93380033C83E /* HomeWorker.swift */,
+				448838EA224E93490033C83E /* HomePresenter.swift */,
+				448838EC224E93650033C83E /* HomeRouter.swift */,
+				448838EE224E93CD0033C83E /* HomeViewController.swift */,
+			);
+			path = scenes;
+			sourceTree = "<group>";
+		};
+		448838F0224E95510033C83E /* view */ = {
+			isa = PBXGroup;
+			children = (
+				4488391F2252F62A0033C83E /* DogDetail.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		448838F5224EA8800033C83E /* base */ = {
+			isa = PBXGroup;
+			children = (
+				448838F6224EA8960033C83E /* BaseViewController.swift */,
+				448838F8224EA9D50033C83E /* BaseRequest.swift */,
+			);
+			path = base;
+			sourceTree = "<group>";
+		};
+		44883904225057840033C83E /* dog list */ = {
+			isa = PBXGroup;
+			children = (
+				44883908225058690033C83E /* scenes */,
+				44883905225057D70033C83E /* Storyboards */,
+			);
+			path = "dog list";
+			sourceTree = "<group>";
+		};
+		44883905225057D70033C83E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				448839062250580D0033C83E /* DogList.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		44883908225058690033C83E /* scenes */ = {
+			isa = PBXGroup;
+			children = (
+				448838F0224E95510033C83E /* view */,
+				44883917225180E30033C83E /* request */,
+				448839092250587A0033C83E /* dog list */,
+			);
+			path = scenes;
+			sourceTree = "<group>";
+		};
+		448839092250587A0033C83E /* dog list */ = {
+			isa = PBXGroup;
+			children = (
+				4488390D22517FBD0033C83E /* DogListInteractor.swift */,
+				4488390F22517FD00033C83E /* DogListModels.swift */,
+				4488391122517FE60033C83E /* DogListWorker.swift */,
+				4488391322517FF10033C83E /* DogListPresenter.swift */,
+				4488391522517FFB0033C83E /* DogListRouter.swift */,
+				4488390A225058A70033C83E /* DogListViewController.swift */,
+			);
+			path = "dog list";
+			sourceTree = "<group>";
+		};
+		4488390C22505B040033C83E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				448838C0224E6B220033C83E /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		44883917225180E30033C83E /* request */ = {
+			isa = PBXGroup;
+			children = (
+				44883918225180F40033C83E /* mappers */,
+				4488391B225183590033C83E /* DogRequest.swift */,
+			);
+			path = request;
+			sourceTree = "<group>";
+		};
+		44883918225180F40033C83E /* mappers */ = {
+			isa = PBXGroup;
+			children = (
+				448839192251810D0033C83E /* MapperDog.swift */,
+			);
+			path = mappers;
+			sourceTree = "<group>";
+		};
+		A0C43306983D227088328DB1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C296731CDA74DF76ABA8DBCA /* Pods_IdDog.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -111,9 +313,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 448838D6224E6B230033C83E /* Build configuration list for PBXNativeTarget "IdDog" */;
 			buildPhases = (
+				4D2169DA8B8BEF5312A759FF /* [CP] Check Pods Manifest.lock */,
 				448838B5224E6B220033C83E /* Sources */,
 				448838B6224E6B220033C83E /* Frameworks */,
 				448838B7224E6B220033C83E /* Resources */,
+				4A9CD8138C77C033887AEC95 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -187,6 +391,7 @@
 			files = (
 				448838C7224E6B230033C83E /* LaunchScreen.storyboard in Resources */,
 				448838C4224E6B230033C83E /* Assets.xcassets in Resources */,
+				448839072250580D0033C83E /* DogList.storyboard in Resources */,
 				448838C2224E6B220033C83E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -200,13 +405,85 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4A9CD8138C77C033887AEC95 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-IdDog/Pods-IdDog-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-IdDog/Pods-IdDog-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4D2169DA8B8BEF5312A759FF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IdDog-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		448838B5224E6B220033C83E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4488391222517FE60033C83E /* DogListWorker.swift in Sources */,
+				4488391622517FFB0033C83E /* DogListRouter.swift in Sources */,
+				44883903224EB6980033C83E /* MapperSignup.swift in Sources */,
+				448838EB224E93490033C83E /* HomePresenter.swift in Sources */,
 				448838BF224E6B220033C83E /* ViewController.swift in Sources */,
+				4488390E22517FBD0033C83E /* DogListInteractor.swift in Sources */,
+				448839202252F62A0033C83E /* DogDetail.swift in Sources */,
 				448838BD224E6B220033C83E /* AppDelegate.swift in Sources */,
+				448838DE224E90580033C83E /* Session.swift in Sources */,
+				4488391A2251810D0033C83E /* MapperDog.swift in Sources */,
+				4488391022517FD00033C83E /* DogListModels.swift in Sources */,
+				448838FD224EAB8E0033C83E /* HomeModels.swift in Sources */,
+				448838E7224E931C0033C83E /* HomeInteractor.swift in Sources */,
+				4488390B225058A70033C83E /* DogListViewController.swift in Sources */,
+				448838F7224EA8960033C83E /* BaseViewController.swift in Sources */,
+				448838F9224EA9D50033C83E /* BaseRequest.swift in Sources */,
+				44883901224EACDD0033C83E /* SignupRequest.swift in Sources */,
+				448838EF224E93CD0033C83E /* HomeViewController.swift in Sources */,
+				4488391422517FF10033C83E /* DogListPresenter.swift in Sources */,
+				4488391C225183590033C83E /* DogRequest.swift in Sources */,
+				448838ED224E93650033C83E /* HomeRouter.swift in Sources */,
+				448838E9224E93380033C83E /* HomeWorker.swift in Sources */,
+				448838E0224E919B0033C83E /* ImageUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -366,10 +643,11 @@
 		};
 		448838D7224E6B230033C83E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E37708AD6D305C921CD6B62 /* Pods-IdDog.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F2TUAMX4Z8;
+				DEVELOPMENT_TEAM = HVNA25BV2B;
 				INFOPLIST_FILE = IdDog/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -385,10 +663,11 @@
 		};
 		448838D8224E6B230033C83E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F91185E68B3EF9D412BE03EA /* Pods-IdDog.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = F2TUAMX4Z8;
+				DEVELOPMENT_TEAM = HVNA25BV2B;
 				INFOPLIST_FILE = IdDog/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (

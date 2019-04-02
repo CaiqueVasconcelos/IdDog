@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  IdDog
 //
-//  Created by Santander on 29/03/19.
+//  Created by Caique on 29/03/19.
 //  Copyright © 2019 Vasconcelos. All rights reserved.
 //
 
