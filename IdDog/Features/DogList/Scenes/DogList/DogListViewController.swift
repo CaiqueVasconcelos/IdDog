@@ -12,12 +12,11 @@ protocol DogListDisplayLogic: class {
     func displayDogs(viewModel: DogList.dogs.ViewModel)
     func displayError(error: String)
 }
-class DogListViewController: BaseViewController, UIPickerViewDataSource,UIPickerViewDelegate {
+class DogListViewController: BaseViewController {
 
     var interactor: DogListBusinessLogic?
     var router: (NSObjectProtocol & DogListRoutingLogic & DogDataPassing)?
     
-    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var selectCategory: UITextField!
     
     var dogDataStore: Dog?
@@ -27,6 +26,11 @@ class DogListViewController: BaseViewController, UIPickerViewDataSource,UIPicker
     fileprivate var pickerOverlay: UIView!
     fileprivate var flagPicker: UIPickerView!
     var categorias: [String] = ["husky","hound","pug","labrador"]
+    
+    var images = [AnyObject]()
+    
+    @IBOutlet weak var collectionView: UICollectionView!
+    var myCollectionView:UICollectionView?
     
     
     // MARK: Object lifecycle
@@ -42,14 +46,12 @@ class DogListViewController: BaseViewController, UIPickerViewDataSource,UIPicker
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setup()
-        self.tableView.dataSource = self
-        self.tableView.delegate = self
         showLoading()
         interactor?.listDogs(request: DogList.dogs.Request(token:Session.token, category: ""))
         let thePicker = UIPickerView()
         selectCategory.inputView = thePicker
         thePicker.delegate = self
+        setupCollect()
     }
     
     // MARK: Setup
@@ -66,6 +68,11 @@ class DogListViewController: BaseViewController, UIPickerViewDataSource,UIPicker
         router.dataStore = interactor
     }
     
+    func setupCollect(){
+        collectionView!.dataSource = self
+        collectionView!.delegate = self
+        collectionView!.reloadData()
+    }
     // MARK: Routing
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let scene = segue.identifier {
@@ -75,8 +82,8 @@ class DogListViewController: BaseViewController, UIPickerViewDataSource,UIPicker
             }
         }
     }
-    
-    
+}
+extension DogListViewController:  UIPickerViewDataSource,UIPickerViewDelegate {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -90,20 +97,21 @@ class DogListViewController: BaseViewController, UIPickerViewDataSource,UIPicker
     }
     
     func pickerView( _ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-//        pickerView.isHidden = true
+        //        pickerView.isHidden = true
         showLoading()
         self.view.endEditing(true)
         interactor?.validateSelection(category: categorias[row], dogs: dogsDataStore!)
     }
 }
+
 extension DogListViewController: DogListDisplayLogic {
     func displayDogs(viewModel: DogList.dogs.ViewModel) {
         self.showLoading()
+        self.navigationController?.navigationBar.backItem?.title = "Voltar"
         dogDataStore = viewModel.dog
         dogsDataStore = viewModel.dogs
         self.selectCategory.placeholder = dogDataStore?.category
-        self.tableView.reloadData()
-        self.navigationController?.navigationBar.backItem?.title = "Voltar"
+        collectionView!.reloadData()
     }
     
     func displayError(error: String) {
@@ -111,35 +119,25 @@ extension DogListViewController: DogListDisplayLogic {
         showMessage(buttonTitle: "OK", message: error)
     }
 }
-extension DogListViewController: UITableViewDataSource, UITableViewDelegate {
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+extension DogListViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return self.dogDataStore?.urlList?.count ?? 0
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dogDataStore?.urlList?.count ?? 0
-    }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "tableViewCell")else {
-            return UITableViewCell()
-        }
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DogIconIdentifier", for: indexPath) as! DogIconCollectionViewCell
+        cell.backgroundColor = UIColor.black
+        
         let url = URL(string: dogDataStore?.urlList?[indexPath.row] ?? "")
-        cell.imageView?.af_setImage(withURL: url!)
+        cell.imageView.af_setImage(withURL: url!)
+        
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath)
+    {
         interactor?.selectImage(image: dogDataStore!.urlList![indexPath.row])
         router?.routeToDogDetail(segue: nil)
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 68
-    }
-}
-extension DogListViewController: DogDetailDelegate {
-    func dismiss() {
-        dismiss(animated: true, completion: nil)
     }
 }

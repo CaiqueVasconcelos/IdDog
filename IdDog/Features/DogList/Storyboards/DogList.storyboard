@@ -40,27 +40,47 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XOh-nU-Acc">
-                                <rect key="frame" x="0.0" y="174" width="375" height="493"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="FMo-Sg-CfG">
+                                <rect key="frame" x="0.0" y="184" width="375" height="483"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="tableViewCell" id="iwv-sZ-HZf">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iwv-sZ-HZf" id="aPM-4J-eac">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="9ef-8W-0Ia">
+                                    <size key="itemSize" width="200" height="100"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DogIconIdentifier" id="KFx-et-ZgS" customClass="DogIconCollectionViewCell" customModule="IdDog" customModuleProvider="target">
+                                        <rect key="frame" x="87.5" y="0.0" width="200" height="100"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="100"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SOX-Yk-f0I">
+                                                    <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="SOX-Yk-f0I" firstAttribute="leading" secondItem="KFx-et-ZgS" secondAttribute="leading" id="1I3-08-2EP"/>
+                                            <constraint firstItem="SOX-Yk-f0I" firstAttribute="top" secondItem="KFx-et-ZgS" secondAttribute="top" id="4Nc-A9-6l3"/>
+                                            <constraint firstAttribute="trailing" secondItem="SOX-Yk-f0I" secondAttribute="trailing" id="8SD-cz-TDk"/>
+                                            <constraint firstAttribute="bottom" secondItem="SOX-Yk-f0I" secondAttribute="bottom" id="MKh-fP-EKP"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="SOX-Yk-f0I" id="CWL-vx-8Je"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="XOh-nU-Acc" firstAttribute="top" secondItem="h6c-4Y-D88" secondAttribute="bottom" constant="40" id="Do4-kK-g03"/>
-                            <constraint firstItem="XOh-nU-Acc" firstAttribute="leading" secondItem="PEZ-Qb-8W6" secondAttribute="leading" id="RDX-NF-V0V"/>
-                            <constraint firstItem="PEZ-Qb-8W6" firstAttribute="trailing" secondItem="XOh-nU-Acc" secondAttribute="trailing" id="XJg-2f-LYX"/>
-                            <constraint firstItem="PEZ-Qb-8W6" firstAttribute="bottom" secondItem="XOh-nU-Acc" secondAttribute="bottom" id="fFX-mz-NGl"/>
+                            <constraint firstItem="FMo-Sg-CfG" firstAttribute="leading" secondItem="PEZ-Qb-8W6" secondAttribute="leading" id="0BP-6h-rzW"/>
+                            <constraint firstItem="PEZ-Qb-8W6" firstAttribute="trailing" secondItem="FMo-Sg-CfG" secondAttribute="trailing" id="PGB-NF-RKY"/>
+                            <constraint firstItem="PEZ-Qb-8W6" firstAttribute="bottom" secondItem="FMo-Sg-CfG" secondAttribute="bottom" id="QUq-b5-j6c"/>
+                            <constraint firstItem="FMo-Sg-CfG" firstAttribute="top" secondItem="h6c-4Y-D88" secondAttribute="bottom" constant="50" id="fZl-Al-Vcd"/>
                             <constraint firstItem="h6c-4Y-D88" firstAttribute="top" secondItem="PEZ-Qb-8W6" secondAttribute="top" constant="40" id="ob7-nx-Okc"/>
                             <constraint firstItem="PEZ-Qb-8W6" firstAttribute="trailing" secondItem="h6c-4Y-D88" secondAttribute="trailing" constant="20" id="ozg-Ua-mSF"/>
                             <constraint firstItem="h6c-4Y-D88" firstAttribute="leading" secondItem="PEZ-Qb-8W6" secondAttribute="leading" constant="20" id="yrM-jg-xNB"/>
@@ -71,8 +91,8 @@
                         <barButtonItem key="backBarButtonItem" title="Voltar" id="idr-AY-7gM"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="collectionView" destination="FMo-Sg-CfG" id="SF7-EV-tpm"/>
                         <outlet property="selectCategory" destination="h6c-4Y-D88" id="g95-Kt-ib7"/>
-                        <outlet property="tableView" destination="XOh-nU-Acc" id="DZ6-RS-4Wb"/>
                         <segue destination="xne-fR-VZT" kind="show" id="QWt-Fy-tWz"/>
                     </connections>
                 </viewController>

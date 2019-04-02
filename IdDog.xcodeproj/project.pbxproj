@@ -38,6 +38,7 @@
 		44883925225396E70033C83E /* DogDetailModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44883924225396E70033C83E /* DogDetailModels.swift */; };
 		448839272253970A0033C83E /* DogDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448839262253970A0033C83E /* DogDetailRouter.swift */; };
 		44883929225398050033C83E /* DogDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44883928225398050033C83E /* DogDetailInteractor.swift */; };
+		448A74192253FEEC002E197C /* DogIconCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448A74182253FEEC002E197C /* DogIconCollectionViewCell.swift */; };
 		D0DA455685D07A1BC81CA5A3 /* Pods_IdDog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C296731CDA74DF76ABA8DBCA /* Pods_IdDog.framework */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +88,7 @@
 		44883924225396E70033C83E /* DogDetailModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogDetailModels.swift; sourceTree = "<group>"; };
 		448839262253970A0033C83E /* DogDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogDetailRouter.swift; sourceTree = "<group>"; };
 		44883928225398050033C83E /* DogDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogDetailInteractor.swift; sourceTree = "<group>"; };
+		448A74182253FEEC002E197C /* DogIconCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogIconCollectionViewCell.swift; sourceTree = "<group>"; };
 		5E37708AD6D305C921CD6B62 /* Pods-IdDog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IdDog.debug.xcconfig"; path = "Target Support Files/Pods-IdDog/Pods-IdDog.debug.xcconfig"; sourceTree = "<group>"; };
 		C296731CDA74DF76ABA8DBCA /* Pods_IdDog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IdDog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F91185E68B3EF9D412BE03EA /* Pods-IdDog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IdDog.release.xcconfig"; path = "Target Support Files/Pods-IdDog/Pods-IdDog.release.xcconfig"; sourceTree = "<group>"; };
@@ -261,6 +263,7 @@
 		448839092250587A0033C83E /* DogList */ = {
 			isa = PBXGroup;
 			children = (
+				448A74172253FEC4002E197C /* viewCell */,
 				4488390D22517FBD0033C83E /* DogListInteractor.swift */,
 				4488390F22517FD00033C83E /* DogListModels.swift */,
 				4488391122517FE60033C83E /* DogListWorker.swift */,
@@ -305,6 +308,14 @@
 				4488391F2252F62A0033C83E /* DogDetail.swift */,
 			);
 			path = DogDetail;
+			sourceTree = "<group>";
+		};
+		448A74172253FEC4002E197C /* viewCell */ = {
+			isa = PBXGroup;
+			children = (
+				448A74182253FEEC002E197C /* DogIconCollectionViewCell.swift */,
+			);
+			path = viewCell;
 			sourceTree = "<group>";
 		};
 		A0C43306983D227088328DB1 /* Frameworks */ = {
@@ -479,6 +490,7 @@
 				44883925225396E70033C83E /* DogDetailModels.swift in Sources */,
 				4488390E22517FBD0033C83E /* DogListInteractor.swift in Sources */,
 				448839202252F62A0033C83E /* DogDetail.swift in Sources */,
+				448A74192253FEEC002E197C /* DogIconCollectionViewCell.swift in Sources */,
 				448838BD224E6B220033C83E /* AppDelegate.swift in Sources */,
 				448838DE224E90580033C83E /* Session.swift in Sources */,
 				448839272253970A0033C83E /* DogDetailRouter.swift in Sources */,
