@@ -35,6 +35,9 @@
 		4488391A2251810D0033C83E /* MapperDog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448839192251810D0033C83E /* MapperDog.swift */; };
 		4488391C225183590033C83E /* DogRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4488391B225183590033C83E /* DogRequest.swift */; };
 		448839202252F62A0033C83E /* DogDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4488391F2252F62A0033C83E /* DogDetail.swift */; };
+		44883925225396E70033C83E /* DogDetailModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44883924225396E70033C83E /* DogDetailModels.swift */; };
+		448839272253970A0033C83E /* DogDetailRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 448839262253970A0033C83E /* DogDetailRouter.swift */; };
+		44883929225398050033C83E /* DogDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44883928225398050033C83E /* DogDetailInteractor.swift */; };
 		D0DA455685D07A1BC81CA5A3 /* Pods_IdDog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C296731CDA74DF76ABA8DBCA /* Pods_IdDog.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +84,9 @@
 		448839192251810D0033C83E /* MapperDog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapperDog.swift; sourceTree = "<group>"; };
 		4488391B225183590033C83E /* DogRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogRequest.swift; sourceTree = "<group>"; };
 		4488391F2252F62A0033C83E /* DogDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogDetail.swift; sourceTree = "<group>"; };
+		44883924225396E70033C83E /* DogDetailModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogDetailModels.swift; sourceTree = "<group>"; };
+		448839262253970A0033C83E /* DogDetailRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogDetailRouter.swift; sourceTree = "<group>"; };
+		44883928225398050033C83E /* DogDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogDetailInteractor.swift; sourceTree = "<group>"; };
 		5E37708AD6D305C921CD6B62 /* Pods-IdDog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IdDog.debug.xcconfig"; path = "Target Support Files/Pods-IdDog/Pods-IdDog.debug.xcconfig"; sourceTree = "<group>"; };
 		C296731CDA74DF76ABA8DBCA /* Pods_IdDog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IdDog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F91185E68B3EF9D412BE03EA /* Pods-IdDog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IdDog.release.xcconfig"; path = "Target Support Files/Pods-IdDog/Pods-IdDog.release.xcconfig"; sourceTree = "<group>"; };
@@ -171,7 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				448838E2224E91F20033C83E /* home */,
-				44883904225057840033C83E /* dog list */,
+				44883904225057840033C83E /* DogList */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -180,30 +186,30 @@
 			isa = PBXGroup;
 			children = (
 				4488390C22505B040033C83E /* Storyboards */,
-				448838E5224E927C0033C83E /* scenes */,
-				448838E3224E921A0033C83E /* request */,
+				448838E5224E927C0033C83E /* Scenes */,
+				448838E3224E921A0033C83E /* Request */,
 			);
 			path = home;
 			sourceTree = "<group>";
 		};
-		448838E3224E921A0033C83E /* request */ = {
+		448838E3224E921A0033C83E /* Request */ = {
 			isa = PBXGroup;
 			children = (
-				448838E4224E922F0033C83E /* mappers */,
+				448838E4224E922F0033C83E /* Mappers */,
 				44883900224EACDD0033C83E /* SignupRequest.swift */,
 			);
-			path = request;
+			path = Request;
 			sourceTree = "<group>";
 		};
-		448838E4224E922F0033C83E /* mappers */ = {
+		448838E4224E922F0033C83E /* Mappers */ = {
 			isa = PBXGroup;
 			children = (
 				44883902224EB6980033C83E /* MapperSignup.swift */,
 			);
-			path = mappers;
+			path = Mappers;
 			sourceTree = "<group>";
 		};
-		448838E5224E927C0033C83E /* scenes */ = {
+		448838E5224E927C0033C83E /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
 				448838E6224E931C0033C83E /* HomeInteractor.swift */,
@@ -213,15 +219,7 @@
 				448838EC224E93650033C83E /* HomeRouter.swift */,
 				448838EE224E93CD0033C83E /* HomeViewController.swift */,
 			);
-			path = scenes;
-			sourceTree = "<group>";
-		};
-		448838F0224E95510033C83E /* view */ = {
-			isa = PBXGroup;
-			children = (
-				4488391F2252F62A0033C83E /* DogDetail.swift */,
-			);
-			path = view;
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 		448838F5224EA8800033C83E /* base */ = {
@@ -233,13 +231,13 @@
 			path = base;
 			sourceTree = "<group>";
 		};
-		44883904225057840033C83E /* dog list */ = {
+		44883904225057840033C83E /* DogList */ = {
 			isa = PBXGroup;
 			children = (
-				44883908225058690033C83E /* scenes */,
+				44883908225058690033C83E /* Scenes */,
 				44883905225057D70033C83E /* Storyboards */,
 			);
-			path = "dog list";
+			path = DogList;
 			sourceTree = "<group>";
 		};
 		44883905225057D70033C83E /* Storyboards */ = {
@@ -250,17 +248,17 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		44883908225058690033C83E /* scenes */ = {
+		44883908225058690033C83E /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				448838F0224E95510033C83E /* view */,
-				44883917225180E30033C83E /* request */,
-				448839092250587A0033C83E /* dog list */,
+				44883917225180E30033C83E /* Request */,
+				448839092250587A0033C83E /* DogList */,
+				44883921225396660033C83E /* DogDetail */,
 			);
-			path = scenes;
+			path = Scenes;
 			sourceTree = "<group>";
 		};
-		448839092250587A0033C83E /* dog list */ = {
+		448839092250587A0033C83E /* DogList */ = {
 			isa = PBXGroup;
 			children = (
 				4488390D22517FBD0033C83E /* DogListInteractor.swift */,
@@ -270,7 +268,7 @@
 				4488391522517FFB0033C83E /* DogListRouter.swift */,
 				4488390A225058A70033C83E /* DogListViewController.swift */,
 			);
-			path = "dog list";
+			path = DogList;
 			sourceTree = "<group>";
 		};
 		4488390C22505B040033C83E /* Storyboards */ = {
@@ -281,21 +279,32 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		44883917225180E30033C83E /* request */ = {
+		44883917225180E30033C83E /* Request */ = {
 			isa = PBXGroup;
 			children = (
-				44883918225180F40033C83E /* mappers */,
+				44883918225180F40033C83E /* Mappers */,
 				4488391B225183590033C83E /* DogRequest.swift */,
 			);
-			path = request;
+			path = Request;
 			sourceTree = "<group>";
 		};
-		44883918225180F40033C83E /* mappers */ = {
+		44883918225180F40033C83E /* Mappers */ = {
 			isa = PBXGroup;
 			children = (
 				448839192251810D0033C83E /* MapperDog.swift */,
 			);
-			path = mappers;
+			path = Mappers;
+			sourceTree = "<group>";
+		};
+		44883921225396660033C83E /* DogDetail */ = {
+			isa = PBXGroup;
+			children = (
+				44883928225398050033C83E /* DogDetailInteractor.swift */,
+				44883924225396E70033C83E /* DogDetailModels.swift */,
+				448839262253970A0033C83E /* DogDetailRouter.swift */,
+				4488391F2252F62A0033C83E /* DogDetail.swift */,
+			);
+			path = DogDetail;
 			sourceTree = "<group>";
 		};
 		A0C43306983D227088328DB1 /* Frameworks */ = {
@@ -461,15 +470,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				44883929225398050033C83E /* DogDetailInteractor.swift in Sources */,
 				4488391222517FE60033C83E /* DogListWorker.swift in Sources */,
 				4488391622517FFB0033C83E /* DogListRouter.swift in Sources */,
 				44883903224EB6980033C83E /* MapperSignup.swift in Sources */,
 				448838EB224E93490033C83E /* HomePresenter.swift in Sources */,
 				448838BF224E6B220033C83E /* ViewController.swift in Sources */,
+				44883925225396E70033C83E /* DogDetailModels.swift in Sources */,
 				4488390E22517FBD0033C83E /* DogListInteractor.swift in Sources */,
 				448839202252F62A0033C83E /* DogDetail.swift in Sources */,
 				448838BD224E6B220033C83E /* AppDelegate.swift in Sources */,
 				448838DE224E90580033C83E /* Session.swift in Sources */,
+				448839272253970A0033C83E /* DogDetailRouter.swift in Sources */,
 				4488391A2251810D0033C83E /* MapperDog.swift in Sources */,
 				4488391022517FD00033C83E /* DogListModels.swift in Sources */,
 				448838FD224EAB8E0033C83E /* HomeModels.swift in Sources */,
@@ -647,7 +659,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HVNA25BV2B;
+				DEVELOPMENT_TEAM = F2TUAMX4Z8;
 				INFOPLIST_FILE = IdDog/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -667,7 +679,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HVNA25BV2B;
+				DEVELOPMENT_TEAM = F2TUAMX4Z8;
 				INFOPLIST_FILE = IdDog/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (

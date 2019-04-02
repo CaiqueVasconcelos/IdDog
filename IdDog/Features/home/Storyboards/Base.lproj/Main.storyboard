@@ -59,8 +59,8 @@
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="509-Wn-pEN">
-                                                <rect key="frame" x="20" y="308" width="46" height="30"/>
-                                                <state key="normal" title="Button"/>
+                                                <rect key="frame" x="20" y="171" width="335" height="30"/>
+                                                <state key="normal" title="Entrar"/>
                                                 <connections>
                                                     <action selector="tappedConfirma:" destination="MLv-7y-zZL" eventType="touchUpInside" id="j5N-Ga-PXZ"/>
                                                 </connections>
@@ -70,13 +70,14 @@
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="Ive-M2-Sz8" secondAttribute="trailing" constant="20" id="05F-Yb-xRz"/>
                                             <constraint firstItem="Ive-M2-Sz8" firstAttribute="top" secondItem="9Jk-fZ-4Gj" secondAttribute="bottom" constant="60" id="8La-m9-ck2"/>
-                                            <constraint firstItem="509-Wn-pEN" firstAttribute="top" secondItem="Ive-M2-Sz8" secondAttribute="bottom" constant="177" id="B2Z-66-Ier"/>
+                                            <constraint firstItem="509-Wn-pEN" firstAttribute="top" secondItem="Ive-M2-Sz8" secondAttribute="bottom" constant="40" id="B2Z-66-Ier"/>
                                             <constraint firstItem="Ive-M2-Sz8" firstAttribute="top" secondItem="Y75-jW-S1n" secondAttribute="bottom" constant="2" id="RwK-Fd-iep"/>
                                             <constraint firstItem="Y75-jW-S1n" firstAttribute="leading" secondItem="Ive-M2-Sz8" secondAttribute="leading" id="Vd4-4w-W8j"/>
                                             <constraint firstItem="9Jk-fZ-4Gj" firstAttribute="top" secondItem="q44-Sh-5lw" secondAttribute="top" constant="20" id="YhE-HY-jQe"/>
                                             <constraint firstItem="9Jk-fZ-4Gj" firstAttribute="centerX" secondItem="q44-Sh-5lw" secondAttribute="centerX" id="Ytv-mY-oXR"/>
                                             <constraint firstItem="509-Wn-pEN" firstAttribute="leading" secondItem="Ive-M2-Sz8" secondAttribute="leading" id="bma-MH-OtY"/>
                                             <constraint firstItem="Ive-M2-Sz8" firstAttribute="leading" secondItem="q44-Sh-5lw" secondAttribute="leading" constant="20" id="gIo-Ag-JPh"/>
+                                            <constraint firstItem="509-Wn-pEN" firstAttribute="centerX" secondItem="Ive-M2-Sz8" secondAttribute="centerX" id="jQ5-7c-mCV"/>
                                         </constraints>
                                     </view>
                                 </subviews>
